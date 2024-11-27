@@ -1256,23 +1256,63 @@
 // };
 // console.log(balancedStringSplit("RLRRRLLRLL"))
 
+//  Done
+// var removeOuterParentheses = function (s) {
+//   let result = "";
+//   let openCount = 0;
+//   for (let char of s) {
+//     if (char === "(") {
+//       if (openCount > 0) {
+//         result += char;
+//       }
+//       openCount++;
+//     } else if (char === ")") {
+//       openCount--;
+//       if (openCount > 0) {
+//         result += char;
+//       }
+//     }
+//   }
 
-var removeOuterParentheses = function(s) {
-    let result = '';
-    let openCount = 0;
-    for (let char of s) {
-        if (char === '(') {
-            if (openCount > 0) {
-                result += char;
-            }
-            openCount++;
-        } else if (char === ')') {
-            openCount--;
-            if (openCount > 0) {
-                result += char;
-            }
-        }
-    }
+//   return result;
+// };
 
-    return result;
-};
+
+// Done
+// var removeTrailingZeros = function(num) {
+//     return num.replace(/0+$/,'');
+// };
+// console.log(removeTrailingZeros("51230100"));
+
+
+// var splitWordsBySeparator = function(words, separator) {
+//     return words.join(separator).split(separator).filter(Boolean);
+// };
+// console.log(splitWordsBySeparator(["$easy$","$problem$"], "$"));
+
+
+// var clearDigits = function(s) {
+//     // If the string contains any digits, return an empty string
+//     if (/\d/.test(s)) {
+//         return '';
+//     }
+//     return s;
+// };
+// console.log(clearDigits("abc123def456"));  // Output: "abcdef"
+// console.log(clearDigits("a1b2c3"));        // Output: "abc"
+// console.log(clearDigits("cb34"));         // Output: ""
+// console.log(clearDigits("abc"));    
+
+
+// 100 st problem set 👌
+// var numIdenticalPairs = function(nums) {
+//     let count = 0;
+//     for (let i = 0; i < nums.length; i++) {
+//         for (let j = i + 1; j < nums.length; j++) {
+//             if (nums[i] === nums[j]) {
+//                 count++;
+//             }
+//         }
+//     }
+//     return count;
+// };
