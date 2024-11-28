@@ -1277,19 +1277,16 @@
 //   return result;
 // };
 
-
 // Done
 // var removeTrailingZeros = function(num) {
 //     return num.replace(/0+$/,'');
 // };
 // console.log(removeTrailingZeros("51230100"));
 
-
 // var splitWordsBySeparator = function(words, separator) {
 //     return words.join(separator).split(separator).filter(Boolean);
 // };
 // console.log(splitWordsBySeparator(["$easy$","$problem$"], "$"));
-
 
 // var clearDigits = function(s) {
 //     // If the string contains any digits, return an empty string
@@ -1301,8 +1298,7 @@
 // console.log(clearDigits("abc123def456"));  // Output: "abcdef"
 // console.log(clearDigits("a1b2c3"));        // Output: "abc"
 // console.log(clearDigits("cb34"));         // Output: ""
-// console.log(clearDigits("abc"));    
-
+// console.log(clearDigits("abc"));
 
 // 100 st problem set 👌
 // var numIdenticalPairs = function(nums) {
@@ -1316,3 +1312,105 @@
 //     }
 //     return count;
 // };
+
+// var minimumObstacles = function (grid) {
+//   const rows = grid.length;
+//   const cols = grid[0].length;
+//   const directions = [
+//     [0, 1],
+//     [1, 0],
+//     [0, -1],
+//     [-1, 0],
+//   ];
+//   const pq = [[0, 0, 0]];
+//   const visited = Array.from({ length: rows }, () => Array(cols).fill(false));
+
+//   while (pq.length > 0) {
+//     pq.sort((a, b) => a[0] - b[0]);
+//     const [obstacleCount, r, c] = pq.shift();
+//     if (r === rows - 1 && c === cols - 1) return obstacleCount;
+//     if (visited[r][c]) continue;
+//     visited[r][c] = true;
+//     for (const [dr, dc] of directions) {
+//       const newRow = r + dr;
+//       const newCol = c + dc;
+//       if (
+//         newRow >= 0 &&
+//         newRow < rows &&
+//         newCol >= 0 &&
+//         newCol < cols &&
+//         !visited[newRow][newCol]
+//       ) {
+//         pq.push([obstacleCount + grid[newRow][newCol], newRow, newCol]);
+//       }
+//     }
+//   }
+//   return -1;
+// };
+
+// let test = [[0,1,1],[1,1,0],[1,1,0]];
+// console.log(minimumObstacles([[0,1,1],[1,1,0],[1,1,0]]));
+
+// Didn't done
+// var validStrings = function (n) {
+//   const result = [];
+//   const dfs = (current) => {
+//     if (current.length === n) {
+//       if (current.includes("1")) {
+//         result.push(current);
+//       }
+//       return;
+//     }
+//     dfs(current + "0");
+//     dfs(current + "1");
+//   };
+//   dfs("1");
+//   return result;
+// };
+// console.log(validStrings(0));
+
+
+// didn't
+// var canAliceWin = function (nums) {
+//   const n = nums.length;
+//   const memo = new Map();
+//   const dfs = (l, r, turn) => {
+//     const key = `${l}-${r}-${turn}`;
+//     if (memo.has(key)) return memo.get(key);
+//     if (l > r) return 0;
+//     if (turn === 0) {
+//       const chooseLeft = nums[l] + dfs(l + 1, r, 1);
+//       const chooseRight = nums[r] + dfs(l, r - 1, 1);
+//       memo.set(key, Math.max(chooseLeft, chooseRight));
+//     } else {
+//       const chooseLeft = dfs(l + 1, r, 0);
+//       const chooseRight = dfs(l, r - 1, 0);
+//       memo.set(key, Math.min(chooseLeft, chooseRight));
+//     }
+//     return memo.get(key);
+//   };
+//   const aliceScore = dfs(0, n - 1, 0);
+//   const totalScore = nums.reduce((a, b) => a + b, 0);
+//   return aliceScore > totalScore / 2;
+// };
+
+// // Example:
+// console.log(canAliceWin([1, 5, 2]));
+// console.log(canAliceWin([7, 8, 3, 4]));
+
+
+var finalPositionOfSnake = function(n, commands) {
+    let row = 0, col = 0; 
+    for (const command of commands) {
+        if (command === "UP") {
+            row -= 1;
+        } else if (command === "DOWN") {
+            row += 1;
+        } else if (command === "LEFT") {
+            col -= 1;
+        } else if (command === "RIGHT") {
+            col += 1;
+        }
+    }
+    return row * n + col;
+};
