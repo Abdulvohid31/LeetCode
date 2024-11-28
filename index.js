@@ -1399,18 +1399,20 @@
 // console.log(canAliceWin([7, 8, 3, 4]));
 
 
-var finalPositionOfSnake = function(n, commands) {
-    let row = 0, col = 0; 
-    for (const command of commands) {
-        if (command === "UP") {
-            row -= 1;
-        } else if (command === "DOWN") {
-            row += 1;
-        } else if (command === "LEFT") {
-            col -= 1;
-        } else if (command === "RIGHT") {
-            col += 1;
-        }
-    }
-    return row * n + col;
-};
+
+// Done
+// var finalPositionOfSnake = function(n, commands) {
+//     let row = 0, col = 0; 
+//     for (const command of commands) {
+//         if (command === "UP") {
+//             row -= 1;
+//         } else if (command === "DOWN") {
+//             row += 1;
+//         } else if (command === "LEFT") {
+//             col -= 1;
+//         } else if (command === "RIGHT") {
+//             col += 1;
+//         }
+//     }
+//     return row * n + col;
+// };
