@@ -1416,3 +1416,19 @@
 //     }
 //     return row * n + col;
 // };
+
+// 1790
+
+// var areAlmostEqual = function(s1, s2) {
+//     if (s1.length !== s2.length) return false;
+//     if (s1 === s2) return true;
+//     let res = [];
+//     for (let i = 0; i < s1.length; i++) {
+//         if (s1[i] !== s2[i]) {
+//             res.push(i);
+//         }
+//     }
+//     return res.length === 2 && s1[res[0]] === s2[res[1]] && s1[res[1]] === s2[res[0]];
+// };
+
+// console.log(areAlmostEqual("npv", "zpn")) 
