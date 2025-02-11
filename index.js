@@ -1445,3 +1445,21 @@
 //     }
 //     return stack.join('');
 // };
+
+
+// var removeOccurrences = function(s: string, part: string) {
+//     while (s.includes(part)) {
+//         s = s.replace(part, ''); 
+//     }
+//     return s;
+// };
+// console.log(removeOccurrences("aabababa", "aba"));
+
+// class Solution {
+//   public String removeOccurrences(String s, String part) {
+//         while (s.contains(part)) { // Use contains() instead of includes()
+//             s = s.replaceFirst(part, ""); // Replace only the first occurrence
+//         }
+//         return s;
+//     }
+// }
