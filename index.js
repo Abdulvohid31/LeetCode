@@ -1463,20 +1463,20 @@
 
 
 // 2161. Partition Array According to Given Pivot
-var pivotArray = function (nums, pivot) {
-  let left = [];
-  let middle = [];
-  let right = [];
+// var pivotArray = function (nums, pivot) {
+//   let left = [];
+//   let middle = [];
+//   let right = [];
 
-  for (let num of nums) {
-    if (num < pivot) {
-      left.push(num);
-    } else if (num === pivot) {
-      middle.push(num);
-    } else {
-      right.push(num);
-    }
-  }
+//   for (let num of nums) {
+//     if (num < pivot) {
+//       left.push(num);
+//     } else if (num === pivot) {
+//       middle.push(num);
+//     } else {
+//       right.push(num);
+//     }
+//   }
 
-  return [...left, ...middle, ...right];
-};
+//   return [...left, ...middle, ...right];
+// };
