@@ -1369,7 +1369,6 @@
 // };
 // console.log(validStrings(0));
 
-
 // didn't
 // var canAliceWin = function (nums) {
 //   const n = nums.length;
@@ -1398,11 +1397,9 @@
 // console.log(canAliceWin([1, 5, 2]));
 // console.log(canAliceWin([7, 8, 3, 4]));
 
-
-
 // Done
 // var finalPositionOfSnake = function(n, commands) {
-//     let row = 0, col = 0; 
+//     let row = 0, col = 0;
 //     for (const command of commands) {
 //         if (command === "UP") {
 //             row -= 1;
@@ -1431,14 +1428,14 @@
 //     return res.length === 2 && s1[res[0]] === s2[res[1]] && s1[res[1]] === s2[res[0]];
 // };
 
-// console.log(areAlmostEqual("npv", "zpn")) 
+// console.log(areAlmostEqual("npv", "zpn"))
 
 // Dayly 3174. Clear Digits
 // var clearDigits = function(s) {
 //     let stack = [];
 //     for (let char of s) {
 //         if (/\d/.test(char)) {
-//             if (stack.length > 0) stack.pop(); 
+//             if (stack.length > 0) stack.pop();
 //         } else {
 //             stack.push(char);
 //         }
@@ -1446,10 +1443,9 @@
 //     return stack.join('');
 // };
 
-
 // var removeOccurrences = function(s: string, part: string) {
 //     while (s.includes(part)) {
-//         s = s.replace(part, ''); 
+//         s = s.replace(part, '');
 //     }
 //     return s;
 // };
@@ -1463,3 +1459,24 @@
 //         return s;
 //     }
 // }
+
+
+
+// 2161. Partition Array According to Given Pivot
+var pivotArray = function (nums, pivot) {
+  let left = [];
+  let middle = [];
+  let right = [];
+
+  for (let num of nums) {
+    if (num < pivot) {
+      left.push(num);
+    } else if (num === pivot) {
+      middle.push(num);
+    } else {
+      right.push(num);
+    }
+  }
+
+  return [...left, ...middle, ...right];
+};
