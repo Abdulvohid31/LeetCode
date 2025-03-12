@@ -1543,3 +1543,8 @@
 //         return cache[key] = fn(...args);
 //     }
 // }
+
+// 2723
+async function sleep(millis) {
+    return new Promise(resolve => setTimeout(resolve, millis));
+}
