@@ -1513,8 +1513,21 @@
 // console.log(filter(arr1, fn1));
 
 // 2629 done
-var compose = function(functions) {
-    return function(x) {
-        return functions.reduceRight((acc, fn) => fn(acc), x);
-    }
-};
+// var compose = function(functions) {
+//     return function(x) {
+//         return functions.reduceRight((acc, fn) => fn(acc), x);
+//     }
+// };
+
+
+// Once done
+// var once = function(fn) { 
+//     return function(...args){
+//         if (fn) {
+//             let result = fn(...args);
+//             fn = null;
+//             return result;
+//         }
+//     }
+// };
+
