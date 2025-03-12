@@ -1479,7 +1479,6 @@
 //   return [...left, ...middle, ...right];
 // };
 
-
 // 2529 dayly
 // var maximumCount = function (nums) {
 //   let positiveCount = 0;
@@ -1495,3 +1494,20 @@
 //   return Math.max(positiveCount, negativeCount);
 // };
 // console.log(maximumCount([-1, -2, -3, 4, 5, 15]));
+
+
+// 2634
+// var filter = function (arr, fn) {
+//   const result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (fn(arr[i], i, arr)) {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result;
+// };
+// const arr1 = [0, 10, 20, 30];
+// const fn1 = function greaterThan10(n) {
+//   return n > 10;
+// };
+// console.log(filter(arr1, fn1));
