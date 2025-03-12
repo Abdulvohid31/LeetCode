@@ -1545,6 +1545,15 @@
 // }
 
 // 2723
-async function sleep(millis) {
-    return new Promise(resolve => setTimeout(resolve, millis));
-}
+// async function sleep(millis) {
+//     return new Promise(resolve => setTimeout(resolve, millis));
+// }
+
+
+// 2715
+// var cancellable = function(fn, args, t) {
+//     let timer = setTimeout(() => fn(...args), t);
+//     return function() {
+//         clearTimeout(timer);
+//     }
+// };
