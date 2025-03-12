@@ -1460,8 +1460,6 @@
 //     }
 // }
 
-
-
 // 2161. Partition Array According to Given Pivot
 // var pivotArray = function (nums, pivot) {
 //   let left = [];
@@ -1480,3 +1478,20 @@
 
 //   return [...left, ...middle, ...right];
 // };
+
+
+// 2529 dayly
+// var maximumCount = function (nums) {
+//   let positiveCount = 0;
+//   let negativeCount = 0;
+
+//   for (let num of nums) {
+//     if (num > 0) {
+//       positiveCount++;
+//     } else if (num < 0) {
+//       negativeCount++;
+//     }
+//   }
+//   return Math.max(positiveCount, negativeCount);
+// };
+// console.log(maximumCount([-1, -2, -3, 4, 5, 15]));
