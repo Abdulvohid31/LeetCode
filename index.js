@@ -1599,10 +1599,25 @@
 //     };
 // };
 
+
+// chunk
 // var chunk = function(arr, size) {
 //     const result = [];
 //     for (let i = 0; i < arr.length; i += size) {
 //         result.push(arr.slice(i, i + size));
 //     }
 //     return result;
+// };
+
+
+// 2631
+// Array.prototype.groupBy = function(fn) {
+//         return this.reduce((acc, item) => {
+//             const key = fn(item);
+//             if (!acc[key]) {
+//                 acc[key] = [];
+//             }
+//             acc[key].push(item);
+//             return acc;
+//         }, {});
 // };
