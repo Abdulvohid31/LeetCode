@@ -1572,19 +1572,29 @@
 
 
 // 2637 with gpt
-var timeLimit = function(fn, t) {
-    return async function(...args) {
-        return new Promise((resolve, reject) => {
-            const timer = setTimeout(() => reject("Time Limit Exceeded"), t);
-            fn(...args)
-                .then(res => {
-                    clearTimeout(timer);
-                    resolve(res);
-                })
-                .catch(err => {
-                    clearTimeout(timer);
-                    reject(err);
-                });
-        });
-    };
-};
+// var timeLimit = function(fn, t) {
+//     return async function(...args) {
+//         return new Promise((resolve, reject) => {
+//             const timer = setTimeout(() => reject("Time Limit Exceeded"), t);
+//             fn(...args)
+//                 .then(res => {
+//                     clearTimeout(timer);
+//                     resolve(res);
+//                 })
+//                 .catch(err => {
+//                     clearTimeout(timer);
+//                     reject(err);
+//                 });
+//         });
+//     };
+// };
+
+// debounce
+// var debounce = function(fn, t) {
+//     let timeout; 
+
+//     return function(...args) {
+//         clearTimeout(timeout); 
+//         timeout = setTimeout(() => fn(...args), t); 
+//     };
+// };
