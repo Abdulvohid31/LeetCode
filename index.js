@@ -1570,7 +1570,6 @@
 //     };
 // }
 
-
 // 2637 with gpt
 // var timeLimit = function(fn, t) {
 //     return async function(...args) {
@@ -1591,14 +1590,13 @@
 
 // debounce
 // var debounce = function(fn, t) {
-//     let timeout; 
+//     let timeout;
 
 //     return function(...args) {
-//         clearTimeout(timeout); 
-//         timeout = setTimeout(() => fn(...args), t); 
+//         clearTimeout(timeout);
+//         timeout = setTimeout(() => fn(...args), t);
 //     };
 // };
-
 
 // chunk
 // var chunk = function(arr, size) {
@@ -1608,7 +1606,6 @@
 //     }
 //     return result;
 // };
-
 
 // 2631
 // Array.prototype.groupBy = function(fn) {
