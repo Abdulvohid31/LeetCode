@@ -1495,7 +1495,6 @@
 // };
 // console.log(maximumCount([-1, -2, -3, 4, 5, 15]));
 
-
 // 2634
 // var filter = function (arr, fn) {
 //   const result = [];
@@ -1519,9 +1518,8 @@
 //     }
 // };
 
-
 // Once done
-// var once = function(fn) { 
+// var once = function(fn) {
 //     return function(...args){
 //         if (fn) {
 //             let result = fn(...args);
@@ -1530,7 +1528,6 @@
 //         }
 //     }
 // };
-
 
 // 2623
 // function memoize(fn) {
@@ -1549,7 +1546,6 @@
 //     return new Promise(resolve => setTimeout(resolve, millis));
 // }
 
-
 // 2715
 // var cancellable = function(fn, args, t) {
 //     let timer = setTimeout(() => fn(...args), t);
@@ -1557,3 +1553,38 @@
 //         clearTimeout(timer);
 //     }
 // };
+
+// function cancellable(fn, args, t) {
+//     let time = 0;
+//     const result = [];
+
+//     function execute() {
+//         result.push({ time, returned: fn(...args) });
+//         time += t;
+//         timer = setTimeout(execute, t);
+//     }
+
+//     let timer = setTimeout(execute, 0); // Start immediately
+//     return function cancel() {
+//         clearTimeout(timer);
+//     };
+// }
+
+
+// 2637 with gpt
+var timeLimit = function(fn, t) {
+    return async function(...args) {
+        return new Promise((resolve, reject) => {
+            const timer = setTimeout(() => reject("Time Limit Exceeded"), t);
+            fn(...args)
+                .then(res => {
+                    clearTimeout(timer);
+                    resolve(res);
+                })
+                .catch(err => {
+                    clearTimeout(timer);
+                    reject(err);
+                });
+        });
+    };
+};
