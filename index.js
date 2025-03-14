@@ -1619,6 +1619,8 @@
 //         }, {});
 // };
 
+
+
 // var join = function (arr1, arr2) {
 //     let map = new Map();
 //     for (let obj of arr1) {
@@ -1634,3 +1636,13 @@
 //     return Array.from(map.values()).sort((a, b) => a.id - b.id);
 // };
  
+ // compactObject xato
+// var compactObject = function(obj) {
+//     for (let key in obj) {
+//         if (!obj[key]) {
+//             delete obj[key];
+//         }
+//     }
+//     return obj;
+// };
+// console.log(compactObject([null, 0, false, 1, true]));
