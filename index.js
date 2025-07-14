@@ -1619,8 +1619,6 @@
 //         }, {});
 // };
 
-
-
 // var join = function (arr1, arr2) {
 //     let map = new Map();
 //     for (let obj of arr1) {
@@ -1635,8 +1633,8 @@
 //     }
 //     return Array.from(map.values()).sort((a, b) => a.id - b.id);
 // };
- 
- // compactObject xato
+
+// compactObject xato
 // var compactObject = function(obj) {
 //     for (let key in obj) {
 //         if (!obj[key]) {
@@ -1659,3 +1657,34 @@
 //         return `[${this.nums.join(",")}]`;
 //     }
 // }
+
+// var countConsistentStrings = function (allowed, words) {
+//   const createSet = new Set(allowed)
+//   let count = 0
+//   for (const word of words) {
+//     let isAllowed = true
+//     for (const map of word) {
+//         if (!createSet.has(map)) {
+//             isAllowed = false
+//             break
+//         }
+//     }
+//     if (isAllowed) {
+//         count++
+//     }
+//   }
+//   return count
+// };
+
+// let letter = 'A'.toUpperCase();
+// let index = 90 - letter.charCodeAt(0) + 1;
+// console.log(index); // Output: 2
+
+var reverseDegree = function (s) {
+  return [...s]
+    .map((item, index) =>
+      (90 - item.toUpperCase().charCodeAt(0) + 1) * (index + 1)
+    )
+    .reduce((acc, curr) => acc + curr, 0);
+};
+console.log(reverseDegree("zaza"));
