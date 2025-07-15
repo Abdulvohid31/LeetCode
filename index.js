@@ -1689,3 +1689,24 @@
 //     .reduce((acc, curr) => acc + curr, 0);
 // };
 // console.log(reverseDegree("zaza"));
+
+
+
+// 3136
+// var isValid = function (word) {
+//   if (word.length < 3 || !/^[a-zA-Z0-9]+$/.test(word)) return false;
+
+//   let hasVowel = false, hasConsonant = false;
+//   const vowels = /[aeiouAEIOU]/;
+
+//   for (let i = 0; i < word.length; i++) {
+//     if (/[a-zA-Z]/.test(word[i])) {
+//       if (vowels.test(word[i])) hasVowel = true;
+//       else hasConsonant = true;
+//       if (hasVowel && hasConsonant) return true;
+//     }
+//   }
+
+//   return hasVowel && hasConsonant;
+// };
+console.log(isValid("123dsa"));
