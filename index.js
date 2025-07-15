@@ -1680,11 +1680,12 @@
 // let index = 90 - letter.charCodeAt(0) + 1;
 // console.log(index); // Output: 2
 
-var reverseDegree = function (s) {
-  return [...s]
-    .map((item, index) =>
-      (90 - item.toUpperCase().charCodeAt(0) + 1) * (index + 1)
-    )
-    .reduce((acc, curr) => acc + curr, 0);
-};
-console.log(reverseDegree("zaza"));
+// 3498
+// var reverseDegree = function (s) {
+//   return [...s]
+//     .map((item, index) =>
+//       (90 - item.toUpperCase().charCodeAt(0) + 1) * (index + 1)
+//     )
+//     .reduce((acc, curr) => acc + curr, 0);
+// };
+// console.log(reverseDegree("zaza"));
