@@ -1709,4 +1709,33 @@
 
 //   return hasVowel && hasConsonant;
 // };
-console.log(isValid("123dsa"));
+// console.log(isValid("123dsa"));
+
+// const permute = (nums) => {
+//     const results = []
+//     const becktrack = (numbers, path) => {
+//         if(!numbers.length) {
+//             results.push(path);
+//             return;
+//         }
+//         for (let i = 0; i < numbers.length; i++) {
+//             becktrack([...numbers.slice(0, i), ...numbers.slice(i + 1)], [...path, numbers[i]])
+//         }
+//     }
+//     becktrack(nums, [])
+//     return results;
+// }
+// const permute = (nums) => {
+//     if (nums.length <= 1) return [[...nums]];
+//     const res = [];
+//     for (let i = 0; i < nums.length; i++) {
+//         const check = [...nums]
+//         check.splice(i, 1)
+//         const temp = permute(check)
+//         for (const el of temp) {
+//             el.push(nums[i])
+//             res.push(el)
+//         }
+//     }
+//     return res;
+// }
