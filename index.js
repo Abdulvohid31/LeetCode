@@ -1690,8 +1690,6 @@
 // };
 // console.log(reverseDegree("zaza"));
 
-
-
 // 3136
 // var isValid = function (word) {
 //   if (word.length < 3 || !/^[a-zA-Z0-9]+$/.test(word)) return false;
@@ -1739,3 +1737,15 @@
 //     }
 //     return res;
 // }
+const testLasers = ["011001", "000000", "010100", "001000"];
+const numberOfBeams = (bank) => {
+  let totalbands = 0;
+  const deviceCount = bank
+    .map((row) => row.split(1).length - 1)
+    .filter((count) => count > 0);
+  for (let i = 1; i < deviceCount.length; i++) {
+    totalbands += deviceCount[i - 1] * deviceCount[i];
+  }
+  return totalbands
+};
+console.log(numberOfBeams(testLasers));
