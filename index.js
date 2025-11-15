@@ -1737,15 +1737,58 @@
 //     }
 //     return res;
 // }
-const testLasers = ["011001", "000000", "010100", "001000"];
-const numberOfBeams = (bank) => {
-  let totalbands = 0;
-  const deviceCount = bank
-    .map((row) => row.split(1).length - 1)
-    .filter((count) => count > 0);
-  for (let i = 1; i < deviceCount.length; i++) {
-    totalbands += deviceCount[i - 1] * deviceCount[i];
-  }
-  return totalbands
-};
-console.log(numberOfBeams(testLasers));
+// const testLasers = ["011001", "000000", "010100", "001000"];
+// const numberOfBeams = (bank) => {
+//   let totalbands = 0;
+//   const deviceCount = bank
+//     .map((row) => row.split(1).length - 1)
+//     .filter((count) => count > 0);
+//   for (let i = 1; i < deviceCount.length; i++) {
+//     totalbands += deviceCount[i - 1] * deviceCount[i];
+//   }
+//   return totalbands
+// };
+// console.log(numberOfBeams(testLasers));
+// Do not working
+// var numberOfSubstrings = function (s) {
+//   const n = s.length;
+
+//   const ones = new Array(n + 1).fill(0);
+//   const zeros = new Array(n + 1).fill(0);
+
+//   for (let i = 0; i < n; i++) {
+//     ones[i + 1] = ones[i] + (s[i] === "1");
+//     zeros[i + 1] = zeros[i] + (s[i] === "0");
+//   }
+
+//   let ans = 0;
+//   const K = Math.floor(Math.sqrt(n)) + 2;
+
+//   for (let left = 0; left < n; left++) {
+//     for (let k = 0; k <= K; k++) {
+//       const length = k * k;
+//       const right = left + length;
+//       if (right > n) break;
+
+//       const z = zeros[right] - zeros[left];
+//       const o = ones[right] - ones[left];
+
+//       if (z === k && o >= k * k) {
+//         ans++;
+//       }
+//     }
+//   }
+
+//   for (let left = 0; left < n; left++) {
+//     for (let right = left + 1; right <= Math.min(n, left + 500); right++) {
+//       const z = zeros[right] - zeros[left];
+//       if (z > K) {
+//         const o = ones[right] - ones[left];
+//         if (o >= z * z) ans++;
+//       }
+//     }
+//   }
+//   return ans;
+// };
+
+console.log(numberOfSubstrings("101101"));
