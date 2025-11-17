@@ -1791,7 +1791,6 @@
 //   return ans;
 // };
 
-// 
 // var longestValidParentheses = function(s) {
 //     let maxLen = 0;
 //     const stack = [-1];
@@ -1810,4 +1809,17 @@
 //     return maxLen;
 //   };
 // console.log(longestValidParentheses(")()())"));
-  
+
+// 1437 to bad solution
+// var kLengthApart = function (nums, k) {
+//   const indexes = nums.reduce((acc, val, idx) => {
+//     if (val > 0) acc.push(idx);
+//     return acc;
+//   }, []);
+//   for (let i = 1; i < indexes.length; i++) {
+//     const distance = indexes[i] - indexes[i - 1];
+//     if (distance <= k) return false;
+//   }
+//   return true;
+// };
+console.log(kLengthApart([1, 0, 0, 0, 1, 0, 0, 1], 2));
