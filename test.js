@@ -50,11 +50,11 @@
 //   const store = new Proxy({ xray: 5, zoom: 8 }, handler); 
    
 //   store.nova = 3; 
-//   console.log(store.xray);
-//   console.log(store.nova);
+
 //   console.log(store.ghost); 
 //   console.log("zoom" in store); 
 //   console.log("xray" in store); 
 function name(params) {
-    
+    //   console.log(store.xray);
+//   console.log(store.nova);
 }
