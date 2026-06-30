@@ -58,3 +58,9 @@ function name(params) {
     //   console.log(store.xray);
 //   console.log(store.nova);
 }
+
+let a = 10;
+let b = a; 
+a = 20;
+console.log(b);
+// Tested for interview
